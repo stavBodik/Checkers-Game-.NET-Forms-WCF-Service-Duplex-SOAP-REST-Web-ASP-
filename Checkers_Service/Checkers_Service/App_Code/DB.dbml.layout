@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB">
+  <DataContextMoniker Name="/DBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6d6e7f4d-7b25-4c6d-b1c6-9e00bcfa6de9" absoluteBounds="2.75, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69b55d18-fa23-45af-99be-4d5bb2bb7295" absoluteBounds="2.765, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a77453b2-514b-41c5-8943-f382427b47d9" absoluteBounds="2.25, 2.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBDataContext/GamePlay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebce69c3-164d-4f9b-bc16-9d782d8fa331" absoluteBounds="2.265, 3.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd83e72b-1b41-44e1-bfd0-cc0314263206" absoluteBounds="0.5, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBDataContext/Movement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e5ec065-d298-42f3-a0e9-d6f05a29746f" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6b6d869-e8d7-4c4f-a80e-3e46176381ec" absoluteBounds="4.625, 2.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBDataContext/Player" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1d79609-a924-456f-84c4-0f90f859bdd2" absoluteBounds="4.6400000000000006, 3.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 3.60659912109375); (4.25 : 3.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBDataContext/Player/Player_GamePlay" />
+      <nodes>
+        <classShapeMoniker Id="b6b6d869-e8d7-4c4f-a80e-3e46176381ec" />
+        <classShapeMoniker Id="a77453b2-514b-41c5-8943-f382427b47d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.625 : 3.05329956054688); (4.25 : 3.05329956054688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBDataContext/Player/Player_GamePlay1" />
+      <nodes>
+        <classShapeMoniker Id="b6b6d869-e8d7-4c4f-a80e-3e46176381ec" />
+        <classShapeMoniker Id="a77453b2-514b-41c5-8943-f382427b47d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 1.19314697265625); (5.6875005 : 1.19314697265625); (5.6875005 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBDataContext/Account/Account_Player" />
+      <nodes>
+        <classShapeMoniker Id="6d6e7f4d-7b25-4c6d-b1c6-9e00bcfa6de9" />
+        <classShapeMoniker Id="b6b6d869-e8d7-4c4f-a80e-3e46176381ec" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

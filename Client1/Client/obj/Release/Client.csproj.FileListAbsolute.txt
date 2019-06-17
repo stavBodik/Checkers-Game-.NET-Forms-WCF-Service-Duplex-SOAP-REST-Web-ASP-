@@ -1,0 +1,11 @@
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\bin\Release\Client.exe.config
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\bin\Release\Client.exe
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\bin\Release\Client.pdb
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.csprojAssemblyReference.cache
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.AboutBox.resources
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.Properties.Resources.resources
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.GameForm.resources
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.csproj.GenerateResource.cache
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.csproj.CoreCompileInputs.cache
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.exe
+C:\DOT_NET_FINAL_PRESENTATION\Client1\Client\obj\Release\Client.pdb

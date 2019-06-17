@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CheckersDB" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CheckersDB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CheckersDB" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Account_Player" Member="Players" ThisKey="EMAIL" OtherKey="AccountEmail" Type="Player" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GamePlay" Member="GamePlays">
+    <Type Name="GamePlay">
+      <Column Name="Host_Player_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Start_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GAME_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Join_Player_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Player_GamePlay" Member="Player" ThisKey="Join_Player_ID" OtherKey="Id" Type="Player" IsForeignKey="true" />
+      <Association Name="Player_GamePlay1" Member="Player1" ThisKey="Host_Player_ID" OtherKey="Id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Movement" Member="Movements">
+    <Type Name="Movement">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Checker_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Row" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Col" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Game_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Player" Member="Players">
+    <Type Name="Player">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountEmail" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isDeleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Player_GamePlay" Member="GamePlays" ThisKey="Id" OtherKey="Join_Player_ID" Type="GamePlay" />
+      <Association Name="Player_GamePlay1" Member="GamePlays1" ThisKey="Id" OtherKey="Host_Player_ID" Type="GamePlay" />
+      <Association Name="Account_Player" Member="Account" ThisKey="AccountEmail" OtherKey="EMAIL" Type="Account" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

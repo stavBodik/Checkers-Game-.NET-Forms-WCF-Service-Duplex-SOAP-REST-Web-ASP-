@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService.App_Code" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService.App_Code" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52032/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+  <xs:complexType name="DTO_RESTORED_GAME">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="gameStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="movements" nillable="true" type="tns:ArrayOfDTO_MOVEMENT" />
+      <xs:element minOccurs="0" name="players" nillable="true" type="tns:ArrayOfDTO_Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTO_RESTORED_GAME" nillable="true" type="tns:DTO_RESTORED_GAME" />
+  <xs:complexType name="ArrayOfDTO_MOVEMENT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_MOVEMENT" nillable="true" type="tns:DTO_MOVEMENT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_MOVEMENT" nillable="true" type="tns:ArrayOfDTO_MOVEMENT" />
+  <xs:complexType name="DTO_MOVEMENT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checker_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Col" type="xs:int" />
+      <xs:element minOccurs="0" name="Game_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Row" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTO_MOVEMENT" nillable="true" type="tns:DTO_MOVEMENT" />
+  <xs:complexType name="ArrayOfDTO_Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_Player" nillable="true" type="tns:DTO_Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_Player" nillable="true" type="tns:ArrayOfDTO_Player" />
+  <xs:complexType name="DTO_Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEAM_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="isDeleted" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTO_Player" nillable="true" type="tns:DTO_Player" />
+  <xs:complexType name="DTO_Checker">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="checkerType" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="oldPositionOnBord" type="q1:Point" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTO_Checker" nillable="true" type="tns:DTO_Checker" />
+  <xs:complexType name="DTO_ACCOUNT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PASSWORD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="players" nillable="true" type="tns:ArrayOfDTO_Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTO_ACCOUNT" nillable="true" type="tns:DTO_ACCOUNT" />
+  <xs:complexType name="DTO_GamePlay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="createDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gameName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hostPlayerAccountEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hostPlayerID" type="xs:int" />
+      <xs:element minOccurs="0" name="hostPlayerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="joinPlayerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="joinedPlayerID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTO_GamePlay" nillable="true" type="tns:DTO_GamePlay" />
+  <xs:complexType name="ArrayOfDTO_GamePlay">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_GamePlay" nillable="true" type="tns:DTO_GamePlay" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_GamePlay" nillable="true" type="tns:ArrayOfDTO_GamePlay" />
+  <xs:complexType name="ArrayOfDTO_PLAYER_GAMES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTO_PLAYER_GAMES" nillable="true" type="tns:DTO_PLAYER_GAMES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTO_PLAYER_GAMES" nillable="true" type="tns:ArrayOfDTO_PLAYER_GAMES" />
+  <xs:complexType name="DTO_PLAYER_GAMES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Games" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlayerName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTO_PLAYER_GAMES" nillable="true" type="tns:DTO_PLAYER_GAMES" />
+</xs:schema>
