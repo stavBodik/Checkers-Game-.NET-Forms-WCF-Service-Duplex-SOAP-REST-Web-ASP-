@@ -29,5 +29,11 @@
   5. MVC (Model View Control) Architecture on the game client side.
   <br><br>
   <h5>Hosted by <a href="https://yedionpub.afeka.ac.il/yedion/fireflyweb.aspx?prgname=Show_Teacher_Card&arguments=-N553,-AE,-N9998">Mr. Bareket Arnon</a></h5>
-  <br />
+  <br /> <br />
+  
+  Please enter to my blog for more information and details :
+<br>
+<a href="#">Soon...</a>
+ 
+ 
 </div>
